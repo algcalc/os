@@ -1,10 +1,8 @@
 #![no_std]
 
-#[cfg(feature = "defmt")]
-use defmt::info;
-#[cfg(feature = "tracing")]
-use tracing::info;
+mod log;
+use log::*;
 
-pub fn yeet() {
-    info!("yeet");
+pub fn hello() {
+    info!("hello world");
 }
